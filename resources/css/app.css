@@ -1,0 +1,98 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#changeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+
+    background: url("../img/compose-40.png");
+    z-index: 100; // otherwise some other element overlay it, and click event wont trigger
+}
+#gaiButton {
+    position: absolute;
+    top: 23px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+
+    /*set initial opacity to 0*/
+    opacity: 0;
+
+    /*border: 2px solid #666;*/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: url("../img/gai-square-35.png");
+    z-index: 99; // otherwise some other element overlay it, and click event wont trigger
+}
+
+#background2 {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    bottom: 0;
+    width: 350px;
+    background: #fff;
+    /*background: rgba(73, 73, 73, 1);*/
+    border-left: 1px solid #e5e5ee;
+    z-index: -1;
+}
+
+/*parent li*/
+li {
+    position: relative;
+}
+
+.editarea {
+    position: absolute;
+    /*top: 0px;*/
+    width: 340px;
+    height: 100%;
+    right: 0px;
+    overflow-y:auto;
+
+    /*margin config*/
+    margin-left: 5px;
+    margin-right: 5px;
+    /*padding config*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    /*text config*/
+    color: #000;
+    white-space: normal;
+
+    /*border config*/
+    border-style:solid;
+    border-color: #fff;
+    border-width: 2px;
+    border-radius:5px;
+    transition: border-color 0.5s linear;
+    -moz-transition: border-color 0.5s linear;     /* FF3.7+ */
+    -o-transition: border-color 0.5s linear;       /* Opera 10.5 */
+    -webkit-transition: border-color 0.5s linear;  /* Saf3.2+, Chrome */
+}
+
+.editarea:hover {
+    border-color: #c9c9c9;
+}
+
+.editarea::-webkit-scrollbar {
+    width: 4px;
+}
+.editarea::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: rgba(214, 214, 214, 0.49);
+}
+.editarea::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 3px rgb(95, 95, 95);
+    background-color: rgba(0, 0, 0, 0.3);
+}
